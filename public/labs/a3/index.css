@@ -3,6 +3,10 @@
 	color: white;
 } */
 
+/*
+Had to comment the above one out for 3.1.3 since it was effecting up the background color in 3.3.1
+*/
+
 p#id-selector-1 {
 	background-color: red;
 	color: white;
@@ -146,10 +150,30 @@ p#id-selector-2 {
 	position: relative;
 }
 
+.pos-absolute-10-10 {
+	position: absolute;
+	top: 10px;
+	left: 10px;
+}
+.pos-absolute-50-50 {
+	position: absolute;
+	top: 50px;
+	left: 50px;
+}
+.pos-absolute-120-20 {
+	position: absolute;
+	top: 20px;
+	left: 120px;
+}
+
 .pos-fixed {
 	position: fixed;
 	right: 0px;
 	bottom: 50%;
+}
+
+.zindex-bring-to-front {
+	z-index: 10;
 }
 
 .float-left {

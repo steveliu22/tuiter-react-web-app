@@ -1,8 +1,8 @@
 const NavigationSidebar = () => {
-    return(`
+  return (`
     <div class="list-group">
         <a href="#" class="list-group-item list-group-item-action">
-            <i class="fab fa-twitter text-black"></i></a>
+            <i class="fab fa-twitter text-white"></i></a>
         <a href="#" class="list-group-item list-group-item-action">
             <div class="row">
                 <div class="col-1">
@@ -74,9 +74,7 @@ const NavigationSidebar = () => {
             </div>
         </a>
     </div>
-    <button type="button" class="btn btn-primary w-100 mt-1 rounded-pill">Tuit</button>`);
+    <button type="button" class="btn btn-primary w-100 mt-1 rounded-pill">Tuit</button>`)
 }
 
-export default NavigationSidebar;
-   
-   
+export default NavigationSidebar

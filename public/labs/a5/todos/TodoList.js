@@ -1,14 +1,14 @@
-import TodoItem from "./TodoItem.js";
-import todos from "./todos.js";
+import TodoItem from './TodoItem.js'
+import todos from './todos.js'
 const TodoList = () => {
-   return(`
+  return (`
       <ul>
          ${
             todos.map(todo => {
-               return(TodoItem(todo));
+               return (TodoItem(todo))
             }).join('')
          }
       </ul>
-   `);
+   `)
 }
-export default TodoList;
+export default TodoList

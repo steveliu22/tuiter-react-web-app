@@ -7,7 +7,7 @@ import { Routes, Route } from 'react-router';
 function App () {
   return (
     <BrowserRouter>
-      <div className="container">
+      <div className="container pb-2 pt-2">
       <Routes>
           <Route index
                  element={<Labs/>}/>

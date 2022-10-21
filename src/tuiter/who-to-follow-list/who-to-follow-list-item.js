@@ -1,3 +1,5 @@
+import React from 'react'
+
 function WhoToFollowListItem (props) {
   return (
       <li className="list-group-item">

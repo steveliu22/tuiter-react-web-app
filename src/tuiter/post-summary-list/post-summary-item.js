@@ -7,7 +7,7 @@ function PostSummaryItem (post) {
         <div className="col-9">
             <div className="text-muted">{post.post.userName}<span
                     className="text-muted fw-normal"> {'. ' + post.post.time}</span></div>
-            <div className="fw-bolder"> {post.post.topic} <i className="fas fa-check-circle"></i></div>
+            <div className="fw-bolder"> {post.post.topic}</div>
             <div>
                 <h6 className="fw-bolder"> {post.post.title} </h6>
             </div>

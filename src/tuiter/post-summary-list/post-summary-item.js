@@ -9,7 +9,7 @@ function PostSummaryItem (post) {
                     className="text-muted fw-normal"> {'. ' + post.post.time}</span></div>
             <div className="fw-bolder"> {post.post.topic}</div>
             <div>
-                <h6 className="fw-bolder"> {post.post.title} </h6>
+                <h6 className="text-muted fw-normal"> {post.post.title} </h6>
             </div>
         </div>
         <div className="col-3"><img className="float-end" src={`/images/${post.post.image}`} width="100px" height="100px"/>

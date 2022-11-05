@@ -1,16 +1,17 @@
 import React from 'react';
-import ExploreComponent from './explore';
+import HomeComponent from './home';
 import NavigationSidebar from './navigation-sidebar';
 import WhoToFollowList from './who-to-follow-list';
 import whoReducer
   from './reducers/who-reducer';
+import tuitsReducer from './reducers/tuits-reducer';
 import { configureStore }
   from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
 import '@fortawesome/fontawesome-free/css/all.css'
 
 const store = configureStore(
-  { reducer: { who: whoReducer } });
+  { reducer: { who: whoReducer, tuits: tuitsReducer } });
 
 function Tuiter () {
   return (
@@ -20,7 +21,7 @@ function Tuiter () {
      <NavigationSidebar/>
     </div>
     <div className="col-xs-10 col-sm-10 col-md-10 col-lg-6 col-xl-6 col-xxl-6">
-    <ExploreComponent/>
+    <HomeComponent/>
     </div>
     <div className="d-none d-sm-none d-md-none d-lg-block col-lg-4 col-xl-4">
     <WhoToFollowList/>

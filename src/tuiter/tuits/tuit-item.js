@@ -12,7 +12,7 @@ function TuitItem (tuit) {
   return (
     <li className="list-group-item">
         <i className="bi bi-x-lg float-end"
-            onClick={() => deleteTuitHandler(tuit._id)}></i>
+            onClick={() => deleteTuitHandler(tuit.tuit._id)}></i>
     <div className="row">
         <div className="col-2 pt-1"><img className="center-block rounded-circle" src={`/images/${tuit.tuit.image}`} width="60px" height="60px"/>
             </div>

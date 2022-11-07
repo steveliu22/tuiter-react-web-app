@@ -1,11 +1,11 @@
 import React, { useState } from 'react';
-
-const NavigationSidebar = () => {
-  const [active, setActive] = useState('home');
+import { Link } from 'react-router-dom';
+const NavigationSidebar = (defaultActive) => {
+  const [active, setActive] = useState(defaultActive.defaultActive);
   return (
    <div className="list-group">
      <a className="list-group-item" href="#"> Tuiter</a>
-     <a className={`list-group-item
+     <Link to='/tuiter' className={`list-group-item
                     ${active === 'home' ? 'active' : ''}`} onClick={() => { setActive('home') }}>
 
             <div class="row">
@@ -16,10 +16,10 @@ const NavigationSidebar = () => {
                     Home
                 </div>
             </div>
-     </a>
+     </Link>
 
-     <a className={`list-group-item
-                    ${active === 'explore' ? 'active' : ''}`} onClick={() => { setActive('explore') }} href="#">
+     <Link to='/tuiter/explore' className={`list-group-item
+                    ${active === 'explore' ? 'active' : ''}`} onClick={() => { setActive('explore') }} href="tuiter/explore">
             <div class="row">
                 <div class="col-1">
                     <i class="fas fa-hashtag"></i>
@@ -28,7 +28,7 @@ const NavigationSidebar = () => {
                     Explore
                 </div>
             </div>
-     </a>
+     </Link>
 
      <a className={`list-group-item
                     ${active === 'labs' ? 'active' : ''}`} onClick={() => { setActive('labs') }} href="#">

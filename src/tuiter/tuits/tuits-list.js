@@ -3,7 +3,7 @@ import { useDispatch, useSelector }
   from 'react-redux';
 import TuitItem from './tuit-item';
 import { findTuitsThunk }
-  from '../../tuiter/services/tuit-thunks';
+  from '../../services/tuit-thunks';
 
 const TuitsList = () => {
   const { tuits, loading } = useSelector(

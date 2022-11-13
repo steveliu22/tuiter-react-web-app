@@ -1,5 +1,5 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { findTuitsThunk, deleteTuitThunk, createTuitThunk }
+import { findTuitsThunk, deleteTuitThunk, createTuitThunk, updateTuitThunk }
   from '../../services/tuit-thunks';
 
 const initialState = {
@@ -16,11 +16,14 @@ const currentUser = {
 const templateTuit = {
   ...currentUser,
   topic: 'Space',
-  time: '2h',
+  time: '1h',
+  handle: '@boringcompany',
+  image: 'nasa-logo.png',
   liked: false,
   replies: 0,
   retuits: 0,
-  likes: 0
+  likes: 0,
+  dislikes: 0
 }
 
 const tuitsSlice = createSlice({
@@ -51,8 +54,17 @@ const tuitsSlice = createSlice({
        (state, { payload }) => {
          state.loading = false
          state.tuits.push(payload)
-       }
-
+       },
+    [updateTuitThunk.fulfilled]:
+  (state, { payload }) => {
+    state.loading = false
+    const tuitNdx = state.tuits
+      .findIndex((t) => t._id === payload._id)
+    state.tuits[tuitNdx] = {
+      ...state.tuits[tuitNdx],
+      ...payload
+    }
+  }
   },
 
   reducers: {

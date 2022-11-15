@@ -17,11 +17,11 @@ function TuitStats (tuit) {
 
   return (
         <div className='row'>
-            <div className='col-2'> <i class="far fa-comment"></i> {tuit.tuit.replies} </div>
-            <div className='col-2'> <i class="fas fa-retweet"></i> {tuit.tuit.retuits} </div>
+            <div className='col-2'> <i className="far fa-comment"></i> {tuit.tuit.replies} </div>
+            <div className='col-2'> <i className="fas fa-retweet"></i> {tuit.tuit.retuits} </div>
             <div className='col-3'> <i onClick={onLikeFunc} className="bi bi-heart-fill me-2 text-danger"></i> {tuit.tuit.likes}  </div>
             <div className='col-3'> <i onClick={onDislikeFunc} className="fas fa-thumbs-down me-2"></i> {tuit.tuit.dislikes}  </div>
-            <div className='col-1'> <i class="fas fa-share-alt"></i></div>
+            <div className='col-1'> <i className="fas fa-share-alt"></i></div>
         </div>
   )
 }

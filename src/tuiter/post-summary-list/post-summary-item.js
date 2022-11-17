@@ -5,7 +5,7 @@ function PostSummaryItem (post) {
     <li className="list-group-item">
     <div className="row">
         <div className="col-9">
-            <div className="text-muted">{post.post.userName}<span
+            <div className="text-muted">{post.post.username}<span
                     className="text-muted fw-normal"> {'. ' + post.post.time}</span></div>
             <div className="fw-bolder"> {post.post.topic}</div>
             <div>

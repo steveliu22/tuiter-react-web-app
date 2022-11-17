@@ -4,6 +4,14 @@ const TUITS_API = `${API_BASE}/tuits`;
 
 
 export const createTuit = async (tuit) => {
+  tuit._id = (new Date()).getTime()+'';
+  tuit.likes = 0;
+  tuit.dislikes = 0;
+  tuit.handle = '@nasa'
+  tuit.time = '2h'
+  tuit.username = 'NASA'
+  tuit.image = 'nasa-logo.png'
+  tuit.liked = false;
   const response = await axios.post(TUITS_API, tuit)
   return response.data;
 }
@@ -15,8 +23,7 @@ export const findTuits = async () => {
 }
 
 export const deleteTuit = async (tid) => {
-  const response = await axios
-    .delete(`${TUITS_API}/${tid}`)
+  const response = await axios.delete(`${TUITS_API}/${tid}`)
   return response.data
 }
 

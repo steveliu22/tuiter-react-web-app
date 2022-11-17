@@ -11,7 +11,7 @@ import '@fortawesome/fontawesome-free/css/all.css'
 import ExploreComponent from './explore';
 
 const store = configureStore(
-  { reducer: { who: whoReducer, tuits: tuitsReducer } });
+  { reducer: { who: whoReducer, tuitsData: tuitsReducer } });
 
 function TuiterExplore () {
   return (

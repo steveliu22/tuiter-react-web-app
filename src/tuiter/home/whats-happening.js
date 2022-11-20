@@ -6,7 +6,7 @@ import React, { useState } from 'react';
 const WhatsHappening = () => {
   const [whatsHappening, setWhatsHappening] = useState('');
   const dispatch = useDispatch();
-  const tuitClickHandler = () => {
+  const tuitClickHandler = async () => {
     const newTuit = {
       tuit: whatsHappening
     }

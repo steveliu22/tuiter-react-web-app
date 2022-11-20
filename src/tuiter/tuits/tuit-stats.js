@@ -7,12 +7,12 @@ function TuitStats (tuit) {
 
   const onLikeFunc = () => dispatch(updateTuitThunk({
     ...tuit.tuit,
-    likes: tuit.tuit.likes + 1
+    likes: parseInt(tuit.tuit.likes) + 1
   }))
 
   const onDislikeFunc = () => dispatch(updateTuitThunk({
     ...tuit.tuit,
-    dislikes: tuit.tuit.dislikes + 1
+    dislikes: parseInt(tuit.tuit.dislikes) + 1
   }))
 
   return (
